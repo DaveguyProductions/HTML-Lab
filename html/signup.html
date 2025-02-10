@@ -1,73 +1,77 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Sign Up</title>
+<head>
+    <title>Sign Up</title>
 
-        <style>
-            div.diabox{
-                border: 2px double black;
-                background: white;
-                padding-top: 4em;
-                padding-bottom: 2em;
-                padding-left: 1em;
-                padding-right: 2em;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                margin: auto;
-                width: 20vw;
-                height: 40vh; 
-                overflow: auto;
-                box-shadow: 1em 1em 0.5em black; 
-                z-index: 10;
-            }
-
-
-            div.button 
-            {
-                border: 3px outset ;
-                margin: 1em;
-                padding: 1em;
-                background: lightgrey;
-                text-align: center;
-                text-decoration-color: gray;
-            }
-        </style>
-    </head>
-    <body>
-        <div class = "diabox">
-            <div>
-            <div>
-            <p>
-            Email:
-            <input size = 20>
-            </p>
-            </div>
-            <div>
-            <p>
-            Name:
-            <input size = 20>
-            </p>
-            </div>
-            <div>
-            <p>
-            Password:
-            <input type = "password" size = 15>
-            </p>
-            </div>
-            <div>
-            <p>
-            Date of Birth:
-            <input type = "date">
-            </p>
-            </div>
-            </div>
-        <hr>
+    <style>
+        div.diabox{
+            border: 2px double black;
+            background: white;
+            padding-top: 4em;
+            padding-bottom: 2em;
+            padding-left: 1em;
+            padding-right: 2em;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 20vw;
+            height: 40vh; 
+            overflow: auto;
+            box-shadow: 1em 1em 0.5em black; 
+            z-index: 10;
+        }
 
 
-        <div class="button"> Sign Up </button>
+        div.button
+        {
+            border: 3px outset ;
+            margin: 1em;
+            padding: 1em;
+            background: lightgrey;
+            text-align: center;
+            text-decoration-color: gray;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class = "diabox">
+        <div>
+        <div>
+        <p>
+        Email:
+        <input size = 20 id="email_s">
+        </p>
         </div>
-    </body>
+        <div>
+        <p>
+        Name:
+        <input size = 20 id="name_s">
+        </p>
+        </div>
+        <div>
+        <p>
+        Password:
+        <input type = "password" size = 15 id="password_s">
+        </p>
+        </div>
+        <div>
+        <p>
+        Date of Birth:
+        <input type = "date" id="date_s">
+        </p>
+        </div>
+        </div>
+    <hr>
+
+    <script src="/html/javascript/signup.js"></script>
+    <!--Passing variables by value to function found on stack overflow by user Ankit-->
+    <div class="button" onclick="check_fields(document.getElementById('email_s').value,document.getElementById('name_s').value,document.getElementById('password_s').value,document.getElementById('date_s').value)">Sign up</div>
+    </div>
+</body>
+
 </html>
