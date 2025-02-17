@@ -70,4 +70,4 @@ function check_fields(email_s, name_s, password_s, date_s)
         alrt.appendChild( document.createTextNode("Welcome!"))
     }
 }
-
+//code
