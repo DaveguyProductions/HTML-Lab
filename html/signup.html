@@ -7,7 +7,7 @@
         div.diabox{
             border: 2px double black;
             background: white;
-            padding-top: 4em;
+            padding-top: 3em;
             padding-bottom: 2em;
             padding-left: 1em;
             padding-right: 2em;
@@ -34,6 +34,20 @@
             text-align: center;
             text-decoration-color: gray;
         }
+
+
+        .alert
+        {
+            background-color: gray;
+            padding: 1em;
+            border: 2px double darkgray;
+            text-align: center; 
+            width: vw;
+            height: 3vh; 
+            -webkit-text-fill-color: lightpink;
+            box-shadow: 0.3em 0.3em 0.3em black; 
+        }
+
     </style>
 </head>
 <body>
@@ -69,6 +83,7 @@
     <hr>
 
     <script src="/html/javascript/signup.js"></script>
+
     <!--Passing variables by value to function found on stack overflow by user Ankit-->
     <div class="button" onclick="check_fields(document.getElementById('email_s').value,document.getElementById('name_s').value,document.getElementById('password_s').value,document.getElementById('date_s').value)">Sign up</div>
     </div>

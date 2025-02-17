@@ -23,11 +23,6 @@ class App:
         return t.render(NAME = n)
     
     @cherrypy.expose
-    def javatest(self):
-        t = lookup.get_template("javatest.html")
-        return t.render()
-    
-    @cherrypy.expose
     def signup(self):
         t = lookup.get_template("signup.html")
         return t.render()

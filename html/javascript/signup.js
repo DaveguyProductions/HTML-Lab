@@ -1,29 +1,45 @@
 function check_fields(email_s, name_s, password_s, date_s)
 {
+    let temp = document.getElementsByClassName("alert")
+    if(temp.length > 0)
+    {
+        temp[0].parentNode.removeChild(temp[0])
+    }
+
+    let alrt = document.createElement("div")
+    alrt.classList.add("alert")
+    document.body.appendChild(alrt)
+
     current_time = Date.now()
-    symbol_count = 0;
+    symbol_count = 0
+    all_good = 0
     email_length = email_s.length
+
 
     if(email_s == "" || name_s == "" || password_s == "" || date_s == "")
     {
-        alert("One or many fields are empty!")
+        alrt.appendChild( document.createTextNode("One or many fields are empty! "))
+        all_good++
     }
     
     input_time = new Date(date_s)
 
     if(current_time - input_time < 410240376000)
     {
-        alert("Ivalid age!")
+        alrt.appendChild( document.createTextNode("Ivalid age! "))
+        all_good++
     }
 
     if(email_s[0] == '@')
     {
-        alert("Email cannot start with an @ symbol!")
+        alrt.appendChild( document.createTextNode("Email cannot start with an @ symbol! "))
+        all_good++
     }
 
     if(email_s[email_length - 1] == '@')
     {
-        alert("Email cannot end with an @ symbol!")
+        alrt.appendChild( document.createTextNode("Email cannot end with an @ symbol! "))
+        all_good++
     }
 
     if(email_s != "")
@@ -39,12 +55,19 @@ function check_fields(email_s, name_s, password_s, date_s)
 
     if(symbol_count > 1)
     {
-        alert("Email address cannot have more than one @ symbol!")
+        alrt.appendChild( document.createTextNode("Email address cannot have more than one @ symbol! "))
+        all_good++
     }
 
     if(symbol_count < 1 && email_s != "")
     {
-        alert("Email address must have @ symbol!")
+        alrt.appendChild( document.createTextNode("Email address must have @ symbol! "))
+        all_good++
+    }
+
+    if(all_good == 0)
+    {
+        alrt.appendChild( document.createTextNode("Welcome!"))
     }
 }
 
